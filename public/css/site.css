@@ -1,0 +1,85 @@
+html{
+  height: 100% !important;
+}
+* { padding: 0; margin: 0; }
+html, body {
+    min-height: 100% !important;
+    height: 100% !important;
+}
+body{
+  padding-top: 66px;
+}
+.navbar-right .navbar-form input {
+  margin-right: 10px;
+}
+.navbar-right .navbar-form button {
+  margin-right: 10px;
+}
+.toast-top-right {
+  margin-top: 50px;
+}
+.mid-page {
+  margin: 0 auto;
+  max-width: 500px;
+}
+.mid-login {
+  margin: 0 auto;
+  max-width: 410px;
+}
+.label-login {
+  margin-top: 5px;
+}
+.invalid-pass {
+  color: #f00;
+}
+footer {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+footer p {
+  border-top: 1px solid #808080;
+  padding-top: 10px;
+}
+.image-container img {
+  width: 100%;
+}
+.song-li {
+  color: #f00;
+}
+.song-li:hover {
+  text-decoration: underline;
+  color: #a30000;
+  cursor: pointer;
+}
+input.ng-dirty.ng-invalid {
+  border: 1px solid #f00;
+}
+input.ng-dirty.ng-valid {
+  border: 1px solid #008000;
+}
+.login-input {
+  max-width: 250px;
+}
+
+#wrap-cont{
+  overflow: hidden;
+  max-height: 490px;
+}
+#container-bg{
+  min-height: 500px;
+  width:102%;
+  margin-left: -1%;
+  margin-top: -5px;
+  height:100%;
+  background:url('/img/bg.jpg') no-repeat center center;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+  position: relative;
+  z-index: 1;
+
+  /* The Magic */
+  background-size:cover;
+}
