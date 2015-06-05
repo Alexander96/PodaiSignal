@@ -9,7 +9,7 @@ module.exports = {
     },
     production: {
         rootPath: rootPath,
-        db: 'mongodb://admin:adminpodaisignal.mongolab.com:49157/podaisignal',
+        db: 'mongodb://admin:adminpodaisignal@ds049157.mongolab.com:49157/podaisignal',
         port: process.env.PORT || 1234
     }
 }
