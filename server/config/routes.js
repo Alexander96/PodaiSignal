@@ -3,6 +3,11 @@
 
 var User = require('mongoose').model('User');
 module.exports = function (app) {
+    app.all('*', function(req, res, next) {
+       res.header("Access-Control-Allow-Headers", "Cache-Control, Pragma, Origin, Authorization, Content-Type, X-Requested-With");
+       res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+       next();
+    });
     app.get('/api/users', auth.isInRole('admin'),controllers.users.getAllUsers );
     app.post('/api/users', controllers.users.createUser);
     app.put('/api/users',auth.isAuthenticated, controllers.users.updateUser);
