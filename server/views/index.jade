@@ -3,13 +3,15 @@ block main-content
     header.navbar.navbar-default.navbar-fixed-top
         .container
             .navbar-header
-                a.navbar-brand(href="/") Подай сигнал
+                a.navbar-brand(href="/") Заглавие
             .navbar-collapse.collapse
                 ul.nav.navbar-nav
                     li
-                        a(href="#/") Home
+                        a(href="#/signal") Подай Сигнал
                     li
-                        a(href="#/about") About
+                        a(href="#/about") Информация
+                    li
+                        a(href="#/all-signals") Всички Сигнали
                 div(ng-include="'partials/account/login-bar'")
     section
         div(ng-view)

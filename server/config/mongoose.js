@@ -1,5 +1,6 @@
 ﻿var mongoose = require('mongoose'),
-    user = require('../models/User.js');
+    user = require('../models/User.js'),
+    signal = require('../models/Signal.js');
 
 module.exports = function(config){
     mongoose.connect(config.db);
@@ -15,5 +16,6 @@ module.exports = function(config){
     });
 
     user.seedInitialUsers();
+    signal.seedInitialSignals();
    
 }

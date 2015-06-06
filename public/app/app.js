@@ -30,6 +30,14 @@ app.config(function($routeProvider, $locationProvider){
             controller: 'ProfileController',
             resolve: routeUserCheck.authenticated
         })
+        .when('/all-signals',{
+            templateUrl: '/partials/allSignals/allSignals',
+            controller: 'AllSingalsController'
+        })
+        .when('/signal', {
+            templateUrl: '/partials/signal/signal',
+            controller: 'SignalController'
+        })
         .otherwise({ redirectTo: '/home' });
 
 });

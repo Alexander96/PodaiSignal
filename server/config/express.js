@@ -21,6 +21,7 @@ module.exports = function ( app, config) {
             key: 'express.sid'
         }
         ) );
+    app.use('/fonts/', express.static(__dirname+'/public/fonts/'));
     app.use(passport.initialize());                         //intialize the constructor for passport
     app.use(passport.session());                            //and the session for poassport
     app.use( express.static( config.rootPath + '/public' ) );   //sets where to search for views

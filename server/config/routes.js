@@ -25,6 +25,9 @@ module.exports = function (app) {
         res.status(404);
         res.end();
     });
+    app.get('/allsignals', controllers.signal.getAllSignals);
+    app.get('/signalsByStatus/:status', controllers.signal.getAllSignalStatus);
+    app.get('/signal/:id', controllers.signal.getSignalById);
     app.get('*', function (req, res) {
         res.render('index', {currentUser: req.user});
     });
