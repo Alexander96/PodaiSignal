@@ -1,0 +1,44 @@
+.signal-container{
+	background: #fff;
+	padding: 10px;
+	border-radius: 10px;
+	margin-bottom: 8px;
+}
+.img-signal-container img{
+	width: 100%;
+	border-radius: 5px;
+	max-height: 200px;
+}
+.signal-description{
+	font-size: 8px;
+}
+.signal-done, .signal-pedding, .signal-inproccess{
+	-webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.signal-done{
+	border: 2px solid #3fad46;
+}
+.signal-done:hover{
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(63,173,70,1);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(63,173,70,1);
+	box-shadow: 0px 0px 10px 0px rgba(63,173,70,1);
+	cursor: pointer;
+}
+.done{
+	color: #3fad46;
+}
+.signal-pedding{
+	border: 2px solid #f0ad4e;
+}
+.signal-pedding:hover{
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(240,173,78,1);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(240,173,78,1);
+	box-shadow: 0px 0px 10px 0px rgba(240,173,78,1);
+	cursor: pointer;
+}
+.pedding{
+	color: #f0ad4e;
+}

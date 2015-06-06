@@ -2,13 +2,20 @@
 	.jumbotron
 		.row
 			div.col-md-6(ng-repeat="signal in signals")
-				.signal-container
+				.signal-container(class="signal-{{signal.status}}")
 					.row
 						.col-md-6
 							.img-signal-container
 								img(src="" ng-src="{{signal.url}}")
 						.col-md-6
-							p {{signal.description}}
+							p.signal-description
+								div {{signal.description}}
 					.row
-						p Подател: {{signal.user.firstName}} {{signal.user.lastName}}
-						p Подадено на: {{signal.time}}
+						.col-md-12
+							span Подател: {{signal.user.firstName}} {{signal.user.lastName}}
+					.row
+						.col-md-12
+							span Подадено на: {{signal.time}}
+					.row
+						.col-md-12
+							span(class="{{signal.status}}") Статус: {{signal.status}}
