@@ -19,9 +19,13 @@ app.factory("SignalService", function($http, $q, identity){
 	function getSignalById(){
 
 	}
+	function postSignal(signal){
+
+	}
 	return {
 		getAllSignals: getAllSignals,
 		getAllSignalsStatus: getAllSignalsStatus,
-		getSignalById: getSignalById
+		getSignalById: getSignalById,
+		postSignal: postSignal
 	}
 })
