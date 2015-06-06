@@ -1,7 +1,7 @@
 {
-  "name": "ListenToMusicApp",
+  "name": "PodaiSingal",
   "version": "0.0.0",
-  "description": "ListenToMusicApp",
+  "description": "PodaiSingal",
   "main": "server.js",
   "author": {
     "name": "Alex",
@@ -21,7 +21,8 @@
     "express-session": "^1.0.4",
     "passport": "^0.2.0",
     "passport-local": "^1.0.0",
-    "serve-favicon": "^2.2.1"
+    "serve-favicon": "^2.2.1",
+    "cors": "^2.7.1"
   },
   "devDependencies": {
     "nodemon": "^1.0.17"

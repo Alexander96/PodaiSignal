@@ -26,7 +26,7 @@ module.exports = function ( app, config) {
     app.use( express.static( config.rootPath + '/public' ) );   //sets where to search for views
     app.use( function( req, res, next ) {                   //allows the access from all origins
 
-        res.header('Access-Control-Allow-Origin', 'http://localhost:5000');
+        res.header('Access-Control-Allow-Origin', null);
         res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, X-AUTHENTICATION, X-IP, Content-Type, Accept');
         res.header('Access-Control-Allow-Credentials', true);
         res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');

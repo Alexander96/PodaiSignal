@@ -19,7 +19,7 @@ module.exports = function (app) {
                beautify: true,
         });
     });
-    app.post('/login',auth.login);
+    app.post('/login', auth.login);
     app.post('/logout', auth.logout);
     app.get('/api/*', function(req,res){
         res.status(404);

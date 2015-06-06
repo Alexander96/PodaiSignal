@@ -82,9 +82,4 @@ input.ng-dirty.ng-valid {
 
 }
 div#content-home{
-  -webkit-filter: blur(0);
-  -moz-filter: blur(0);
-  -o-filter: blur(0);
-  -ms-filter: blur(0);
-  filter: blur(0);
 }
