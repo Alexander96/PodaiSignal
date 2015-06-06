@@ -92,7 +92,7 @@ module.exports.seedInitialSignals = function(){
                     lat: 42.6964868,
                     lng: 23.3040918,
                 },
-                status: "pedding",
+                status: "pending",
                 rate: 15,
                 date: "06/06/2015"
             }, function (err, data) {
@@ -167,7 +167,7 @@ module.exports.seedInitialSignals = function(){
                     lat: 42.6964868,
                     lng: 23.3040918,
                 },
-                status: "pedding",
+                status: "pending",
                 rate: 15,
                 date: "06/06/2015"
             }, function (err, data) {

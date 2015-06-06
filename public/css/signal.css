@@ -12,7 +12,7 @@
 .signal-description{
 	font-size: 8px;
 }
-.signal-done, .signal-pedding, .signal-inproccess{
+.signal-done, .signal-pending, .signal-inproccess{
 	-webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -30,16 +30,16 @@
 .done{
 	color: #3fad46;
 }
-.signal-pedding{
+.signal-pending{
 	border: 2px solid #f0ad4e;
 }
-.signal-pedding:hover{
+.signal-pending:hover{
 	-webkit-box-shadow: 0px 0px 10px 0px rgba(240,173,78,1);
 	-moz-box-shadow: 0px 0px 10px 0px rgba(240,173,78,1);
 	box-shadow: 0px 0px 10px 0px rgba(240,173,78,1);
 	cursor: pointer;
 }
-.pedding{
+.pending{
 	color: #f0ad4e;
 }
 .signal-inproccess{
@@ -54,3 +54,6 @@
 	box-shadow: 0px 0px 10px 0px rgba(69,130,236,1);
 	cursor: pointer;
 };
+.row-signal-done{
+	background: #acf7b0;
+}

@@ -90,12 +90,12 @@ a.white-text{
 a.white-text:hover{
   color: blue !important;
 }
-.content-div {
-text-align: center;
-background: #090;
-color: #fff;
-width: 20%;
-height: 50px;
-position:absolute;
-z-index:9;
+.text-center{
+  text-align: center;
+}
+.line{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  height: 2px;
+  border-bottom: 1px solid #eaeaea;
 }
