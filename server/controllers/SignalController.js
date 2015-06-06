@@ -59,7 +59,7 @@ module.exports = {
     postSignal: function(req, res, next){    //creates a signal
         var signal = req.body;
         
-        if(signal.photo) {
+        if(signal.photo && signal.photo.data != "" && signal.photo.data != null) {
             var b64string = signal.photo.data;
             var buf = new Buffer(b64string, 'base64');
 
