@@ -10,7 +10,8 @@ var signalSchema = mongoose.Schema({
             lng: Number,
         },
         status: String,
-        rate: Number
+        rate: Number,
+        date: String
     });
 
     var Signal = mongoose.model('Signal', signalSchema);
@@ -41,7 +42,8 @@ module.exports.seedInitialSignals = function(){
                     lng: 23.3239467,
                 },
                 status: "inproccess",
-                rate: 15
+                rate: 15,
+                date: "06/06/2015"
             }, function (err, data) {
                 if(err){
                     console.log("Error: " + err);
@@ -67,7 +69,8 @@ module.exports.seedInitialSignals = function(){
                     lng: 23.3040918,
                 },
                 status: "done",
-                rate: 15
+                rate: 15,
+                date: "06/06/2015"
             }, function (err, data) {
                 if(err){
                     console.log("Error: " + err);
@@ -90,7 +93,8 @@ module.exports.seedInitialSignals = function(){
                     lng: 23.3040918,
                 },
                 status: "pedding",
-                rate: 15
+                rate: 15,
+                date: "06/06/2015"
             }, function (err, data) {
                 if(err){
                     console.log("Error: " + err);
@@ -113,7 +117,8 @@ module.exports.seedInitialSignals = function(){
                     lng: 23.3239467,
                 },
                 status: "inproccess",
-                rate: 15
+                rate: 15,
+                date: "06/06/2015"
             }, function (err, data) {
                 if(err){
                     console.log("Error: " + err);
@@ -139,7 +144,8 @@ module.exports.seedInitialSignals = function(){
                     lng: 23.3040918,
                 },
                 status: "done",
-                rate: 15
+                rate: 15,
+                date: "06/06/2015"
             }, function (err, data) {
                 if(err){
                     console.log("Error: " + err);
@@ -162,7 +168,8 @@ module.exports.seedInitialSignals = function(){
                     lng: 23.3040918,
                 },
                 status: "pedding",
-                rate: 15
+                rate: 15,
+                date: "06/06/2015"
             }, function (err, data) {
                 if(err){
                     console.log("Error: " + err);

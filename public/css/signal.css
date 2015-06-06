@@ -42,3 +42,15 @@
 .pedding{
 	color: #f0ad4e;
 }
+.signal-inproccess{
+	border: 2px solid #4582ec;
+}
+.inproccess{
+	color: #4582ec;
+}
+.signal-inproccess:hover{
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(69,130,236,1);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(69,130,236,1);
+	box-shadow: 0px 0px 10px 0px rgba(69,130,236,1);
+	cursor: pointer;
+};
