@@ -1,3 +1,28 @@
 .container
 	.jumbotron
-		h4 Подай сигнал тук
+		.panel.panel-primary
+			.panel-heading
+				h4.panel-title
+					| Изпрати оплакване
+			.panel-body
+				.row
+					.col-md-6
+						form.form-horizontal(name="signalForm")
+							fieldset.padding-big
+								.form-group
+									.row
+										label.col-md-12(for="firstName") Име
+											span.must *
+									.row
+										.col-md-12
+											input.form-control(type="text" required="required" placeholder="Име" ng-model="signal.user.firstName")
+									.pull-right
+										button.btn.btn-primary(ng-disabled="signalForm.$invalid" ng-click="sendSignal(signal)" style="margin-right:5px") Изпрати
+										a.btn.btn-primary(href="#/") Отмяна
+					.col-md-6
+						h4 Преглеждане на снимка: 
+							span Няма още качене снимка
+						.row
+							.col-md-12
+								.signal-img-container
+									img(src="" ng-src="")
