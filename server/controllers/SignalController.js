@@ -1,12 +1,17 @@
 var Signal = require('mongoose').model('Signal');
-
+function applyUrl(signals){
+	for(var i=0;i<signals.length;i++){
+		signals[i].url = "/signal-img/" + signals[i]._id;
+	};
+}
 module.exports = {
     getAllSignals: function(req, res, next){
-    	Signal.find({}).exec(function(err, signals){
+    	Signal.find({}).lean().exec(function(err, signals){
     		if(err){
     			console.log("couldnt find signals: " + err);
     			req.end();
     		}
+    		applyUrl(signals);
     		res.send(signals).end();
     	})
     },
@@ -19,6 +24,7 @@ module.exports = {
     			console.log("couldnt find signals: " + err);
     			req.end();
     		}
+    		applyUrl(signals);
     		res.send(signals).end();
     	})
     },
@@ -30,10 +36,11 @@ module.exports = {
     			console.log("couldnt find a signal: " + err);
     			req.end();
     		}
+    		applyUrl(data);
     		res.send(data).end();
     	})
     },
-    getSignalPhoto: function(req, res, next){	//returns the profile photo of a dog with id parameter
+    getSignalPhoto: function(req, res, next){
 		var	signalId = req.params.signalId;
 
 		Signal.findOne({_id: signalId}).select("photo").exec(function(err, d){

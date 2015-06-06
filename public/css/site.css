@@ -8,6 +8,7 @@ html, body {
 }
 body{
   padding-top: 66px;
+  background: #eaeaea;
 }
 .navbar-right .navbar-form input {
   margin-right: 10px;
@@ -65,7 +66,7 @@ input.ng-dirty.ng-valid {
   height: 100%;
 
 }
-img{
+#slides_control img{
   margin:auto;
   width: 100%;
 

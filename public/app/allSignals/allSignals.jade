@@ -1,3 +1,14 @@
 .container
 	.jumbotron
-		| всички сигнали
+		.row
+			div.col-md-6(ng-repeat="signal in signals")
+				.signal-container
+					.row
+						.col-md-6
+							.img-signal-container
+								img(src="" ng-src="{{signal.url}}")
+						.col-md-6
+							p {{signal.description}}
+					.row
+						p Подател: {{signal.user.firstName}} {{signal.user.lastName}}
+						p Подадено на: {{signal.time}}
