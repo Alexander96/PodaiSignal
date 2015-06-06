@@ -24,6 +24,7 @@ module.exports.seedInitialUsers = function(){
             console.log('Cant find users ' + err)
             return;
         }
+        console.log(collection);
         if ( collection.length == 0 ) {
             var salt,
                 hasedPwd;
