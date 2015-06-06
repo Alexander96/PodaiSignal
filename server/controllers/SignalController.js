@@ -56,4 +56,36 @@ module.exports = {
 			}
 		});
 	},
+    postSignal: function(req, res, next){    //creates a signal
+        var signal = req.body;
+        
+        if(signal.photo) {
+            var b64string = signal.photo.data;
+            var buf = new Buffer(b64string, 'base64');
+
+            var photo = {};
+            photo.data = buf;
+            photo.contentType = signal.photo.contentType;
+            signal.photo = photo;
+        }
+        signal.status = "pending";
+        signal.rate = 0;
+        console.log("------signal-------");
+        console.log(signal);
+        console.log("------signal-------");
+
+        Signal.create(signal, function(err, s){
+            if(err){
+                console.log("failed to create signal: " + err);
+                //res.end({success: false});
+                res.end();
+            }
+            else{
+                //res.end({success: true});
+                res.end();
+            }
+            console.log("success");
+            console.log(s);
+        });
+    },
 }

@@ -25,6 +25,7 @@ module.exports = function (app) {
         res.status(404);
         res.end();
     });
+    app.post('/signal', controllers.signal.postSignal);
     app.get('/allsignals', controllers.signal.getAllSignals);
     app.get('/signalsByStatus/:status', controllers.signal.getAllSignalStatus);
     app.get('/signal/:id', controllers.signal.getSignalById);

@@ -41,8 +41,8 @@ app.controller("SignalController", function($scope, SignalService, identity){
 		signal.photo = photo;
 		signal.date = today;
 		console.log(signal);
-		/*SignalService.postSignal(signal).then(function(response){
-
-		})*/
+		SignalService.postSignal(signal).then(function(response){
+			console.log("resonse: " + response);
+		})
 	}
 });

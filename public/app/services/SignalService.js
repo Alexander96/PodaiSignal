@@ -20,6 +20,18 @@ app.factory("SignalService", function($http, $q, identity){
 
 	}
 	function postSignal(signal){
+		var defer = $q.defer();
+
+		$http.post("/signal", signal)
+		.success(function(data){
+			defer.resolve(data);
+		})
+		.error(function(data){
+			console.log(data);
+			defer.reject();
+		})
+
+		return defer.promise;
 
 	}
 	return {
