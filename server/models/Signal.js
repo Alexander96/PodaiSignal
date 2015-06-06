@@ -42,8 +42,8 @@ module.exports.seedInitialSignals = function(){
                     lng: 23.3239467,
                 },
                 status: "inproccess",
-                rate: 15,
-                date: "06/06/2015"
+                rate: 13,
+                date: "05/06/2015"
             }, function (err, data) {
                 if(err){
                     console.log("Error: " + err);
@@ -69,8 +69,8 @@ module.exports.seedInitialSignals = function(){
                     lng: 23.3040918,
                 },
                 status: "done",
-                rate: 15,
-                date: "06/06/2015"
+                rate: 20,
+                date: "06/05/2015"
             }, function (err, data) {
                 if(err){
                     console.log("Error: " + err);
@@ -93,8 +93,8 @@ module.exports.seedInitialSignals = function(){
                     lng: 23.3040918,
                 },
                 status: "pending",
-                rate: 15,
-                date: "06/06/2015"
+                rate: 17,
+                date: "06/08/2015"
             }, function (err, data) {
                 if(err){
                     console.log("Error: " + err);
@@ -117,8 +117,8 @@ module.exports.seedInitialSignals = function(){
                     lng: 23.3239467,
                 },
                 status: "inproccess",
-                rate: 15,
-                date: "06/06/2015"
+                rate: 9,
+                date: "01/06/2015"
             }, function (err, data) {
                 if(err){
                     console.log("Error: " + err);
@@ -144,8 +144,8 @@ module.exports.seedInitialSignals = function(){
                     lng: 23.3040918,
                 },
                 status: "done",
-                rate: 15,
-                date: "06/06/2015"
+                rate: 28,
+                date: "06/12/2015"
             }, function (err, data) {
                 if(err){
                     console.log("Error: " + err);
@@ -168,8 +168,8 @@ module.exports.seedInitialSignals = function(){
                     lng: 23.3040918,
                 },
                 status: "pending",
-                rate: 15,
-                date: "06/06/2015"
+                rate: 8,
+                date: "06/06/2014"
             }, function (err, data) {
                 if(err){
                     console.log("Error: " + err);

@@ -3,15 +3,21 @@ block main-content
     header.navbar.navbar-default.navbar-fixed-top
         .container
             .navbar-header
-                a.navbar-brand(href="/") Заглавие
+                a.logo-container(href="#/")
+                    img(src="/img/logo.png")
             .navbar-collapse.collapse
                 ul.nav.navbar-nav
-                    li
-                        a(href="#/signal") Подай Сигнал
-                    li
-                        a(href="#/about") Информация
+                    li.active
+                        a(href="#/signal") Подай сигнал
                     li
                         a(href="#/all-signals") Всички Сигнали
+                    li
+                        a(href="#/about") Полезна информация
+                form.navbar-form.navbar-left(role="search")
+                    div.input-group
+                        input.form-control.margin-right(type="text" placeholder="Търси...")
+                        span.input-group-addon
+                            span.search-icon
                 div(ng-include="'partials/account/login-bar'")
     section
         div(ng-view)

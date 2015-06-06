@@ -62,6 +62,14 @@ input.ng-dirty.ng-valid {
   max-width: 250px;
 }
 
+.logo-container{
+  max-width: 70px;
+}
+.logo-container img{
+  width: 50px;
+  margin-top: 5px;
+}
+
 #slides_control > div{
   height: 100%;
 
@@ -98,4 +106,29 @@ a.white-text:hover{
   margin-bottom: 5px;
   height: 2px;
   border-bottom: 1px solid #eaeaea;
+}
+.padding-big{
+  padding: 10px;
+}
+.margin-top{
+  margin-top: 10px;
+}
+.margin-bottom{
+  margin-bottom: 10px;
+}
+.margin-right{
+  margin-right: 5px;
+}
+label{
+  margin-left: 2px;
+}
+.must{
+  color: red;
+}
+.search-icon{
+  background: url("/img/search.png") center center no-repeat;
+  background-size: cover;
+  display: block;
+  width: 25px;
+  height: 20px;
 }
