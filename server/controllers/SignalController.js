@@ -32,5 +32,21 @@ module.exports = {
     		}
     		res.send(data).end();
     	})
-    }
+    },
+    getSignalPhoto: function(req, res, next){	//returns the profile photo of a dog with id parameter
+		var	signalId = req.params.signalId;
+
+		Signal.findOne({_id: signalId}).select("photo").exec(function(err, d){
+
+			if(err || !d) {
+
+				res.status(404).end('Error: ' + err);
+			}
+			else {
+				
+				res.contentType(d.photo.contentType);
+				res.send(d.photo.data);
+			}
+		});
+	},
 }
