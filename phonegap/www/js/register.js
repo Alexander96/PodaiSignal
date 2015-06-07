@@ -4,12 +4,12 @@
 
 //Display the 'extra' city bar on event.
 $("#city-reg").on('change', function(){
-   if($("#city-reg").val() == 0){
-       $("#other-city-reg-wrap").css({display: "block"})
-   }
+    if($("#city-reg").val() == 0){
+        $("#other-city-reg-wrap").css({display: "block"})
+    }
     else {
-       $("#other-city-reg-wrap").css({display: "none"})
-   }
+        $("#other-city-reg-wrap").css({display: "none"})
+    }
 });
 
 // Validates the form.

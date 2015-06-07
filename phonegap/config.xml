@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.phonegap.pupmates" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Нарушения</name>
+<widget id="com.phonegap.narusheniq" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Narusheniq</name>
     <description>
-        Application for dog owners.
+        Our app.
     </description>
     <author email="alexanderyordanov96@gmail.com" href="http://pupmates.net">
-        Team Mink
+        Samurai coders
     </author>
     <content src="index.html" />
     <preference name="permissions" value="none" />

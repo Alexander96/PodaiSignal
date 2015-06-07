@@ -13,7 +13,7 @@
 <div data-role="page" id="login">
 
     <div role="main" class="ui-content">
-        <h1>Добре дошли в PodaiSignal</h1>
+        <h1>Добре дошли в Narusheniq</h1>
         <form data-ajax="false" onSubmit="return login()">
             <label for="user">Потребителско име:</label>
             <input name="text-basic" id="user" value="" type="text">
@@ -22,21 +22,21 @@
             <input type="submit" value="Логин"/>
 
             <div data-role="popup" id="loginpop">
-                <p>Wrong username and/or password.</p>
+                <p>Грешно име и/или парола</p>
             </div>
         </form>
         <p class="login-page-info">
             Нямате регистрация? <a href="#register">Кликни тук</a>
         </p>
         <p class="login-page-info">
-            Искаш да подадеш сигнал без да се регистрираш? <a href="#">Кликни тук</a>
+            Искаш да подадеш сигнал без да се регистрираш? <a href="#podai-signal">Кликни тук</a>
         </p>
     </div>
 </div>
 
 <div data-role="page" id="register">
     <div role="main" class="ui-content">
-        <h1>Добре дошли в PodaiSignal</h1>
+        <h1>Добре дошли в Narusheniq</h1>
         <form data-ajax="false" onSubmit="return register()" id="info-reg">
             <label for="name-reg">Име</label>
             <input name="name" id="name-reg" value="" type="text" />
@@ -86,18 +86,15 @@
         </form>
         <div data-role="popup" id="reg-error">
             <p>
-            <h1>Невалидна регистрация</h1>
-            <p>
-            <p>- Името трябва да е от 3 до 12 символа.</p>
-            <p>- Презимето трябва да е от 3 до 12 символа.</p>
-            <p>- Фамилията трябва да е от 3 до 12 символа.</p>
-            <p> - Юзернейма трябва да е от 4 до 12 символа.</p>
-            <p> - Паролата трябва да е от 4 до 12 символа.</p>
-            <p> - Телефона трябва да  10 символа.</p>
-            <p> - Населеното място трябва да е валидно.</p>
-            <p> - Имейла трябва да е валиден.</p>
-            </p>
-
+                <h1>Невалидна регистрация</h1>
+                <p>- Името трябва да е от 3 до 12 символа.</p>
+                <p>- Презимето трябва да е от 3 до 12 символа.</p>
+                <p>- Фамилията трябва да е от 3 до 12 символа.</p>
+                <p>- Юзернейма трябва да е от 4 до 12 символа.</p>
+                <p>- Паролата трябва да е от 4 до 12 символа.</p>
+                <p>- Телефона трябва да  10 символа.</p>
+                <p>- Населеното място трябва да е валидно.</p>
+                <p>- Имейла трябва да е валиден.</p>
             </p>
         </div>
     </div>
@@ -106,22 +103,19 @@
 <div data-role="page" id="home">
     <div data-role="header">
         <a href="#mainmenu" class="ui-btn ui-icon-bullets ui-btn-icon-left">Меню</a>
-        <h1>This is the home page</h1>
+        <h1>Начало</h1>
     </div>
 
     <div role="main" class="ui-content">
         <p>This is the home page</p>
     </div>
 
-    <div data-role="footer">
-        <h1>This is the home page</h1>
-    </div>
 </div>
 
 <div data-role="page" id="podai-signal">
     <div data-role="header">
         <a href="#mainmenu" class="ui-btn ui-icon-bullets ui-btn-icon-left">Меню</a>
-        <h1>This is the home page</h1>
+        <h1>Подаване на сигнал</h1>
     </div>
     <div role="main" class="ui-content">
         <form data-ajax="false" onsubmit="return submitSignal()" id="signal-submit">
@@ -138,22 +132,27 @@
         </form>
         <button id="photo" onclick="capturePhoto()">Направи снимка</button>
     </div>
-    <div data-role="footer">
-        <h1>This is the home page</h1>
-    </div>
+
 </div>
 
 <div data-role="page" id="vs-signali">
     <div data-role="header">
         <a href="#mainmenu" class="ui-btn ui-icon-bullets ui-btn-icon-left">Меню</a>
-        <h1>This is the home page</h1>
+        <h1>Всички сигнали</h1>
+    </div>
+    <div role="main" class="ui-content" id="selecter">
+        <select id="signal-select" name="signal-select">
+            <option value="all">Всички</option>
+            <option value="pending">Необработени</option>
+            <option value="inproccess">В процес на обработка</option>
+            <option value="done">Завършени</option>
+        </select>
     </div>
     <div role="main" class="ui-content" id="signali">
+
         <!--Data rendering here-->
     </div>
-    <div data-role="footer">
-        <h1>This is the home page</h1>
-    </div>
+
 </div>
 
 <div data-role="panel" id="mainmenu" data-theme="b">
