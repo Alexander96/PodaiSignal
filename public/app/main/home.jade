@@ -16,16 +16,21 @@
 						div
 							ul.margin-left
 								li Община София се присъедини към инициативата
+									hr
 								li Община Варна се присъедини към инициативата
+									hr
 			.col-md-6
 				.panel.panel-warning
 					.panel-heading
 						.panel-title.text-center Последни изпратени сигнали
 					.panel-body
-						ul
+						ul.margin-left
 							li(ng-repeat="s in lastSignals")
-								h5.row {{s.description}}
+								h5.row
+									.col-md-12
+										p {{s.description}}
 								div.row
-									span {{s.firstName}} {{s.lastName}}
+									.col-md-12
+										span {{s.user.firstName}} {{s.user.lastName}}
 								hr
 		

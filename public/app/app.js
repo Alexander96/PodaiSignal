@@ -38,7 +38,11 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/signal/signal',
             controller: 'SignalController'
         })
-        .otherwise({ redirectTo: '/home' });
+        .when('/info', {
+            templateUrl: '/partials/info/info',
+            controller: 'InfoController'
+        })
+        .otherwise({ redirectTo: '/' });
 
 });
 app.run(function($rootScope, $location){

@@ -8,6 +8,7 @@
 	width: 100%;
 	border-radius: 5px;
 	max-height: 200px;
+	min-height: 200px;
 }
 .signal-description{
 	font-size: 8px;

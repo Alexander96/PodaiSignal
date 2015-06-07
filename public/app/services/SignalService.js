@@ -45,7 +45,7 @@ app.factory("SignalService", function($http, $q, identity){
 			console.log(data);
 			defer.reject();
 		});
-		return promise;
+		return defer.promise;
 	}
 	return {
 		getAllSignals: getAllSignals,
