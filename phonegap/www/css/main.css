@@ -1,0 +1,32 @@
+.login-page-info {
+    width: 100%;
+    text-align: center;
+}
+#other-city-reg-wrap {
+    display: none;
+}
+#reg-error {
+    background-color: rgba(255, 25, 25,0.9);
+    border-radius: 10px;
+}
+.signal-p,.signal-c,.signal-i {
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow:2px 2px 10px 10px #C9C9C9;
+}
+.signal-p {
+    border: 2px solid #FFCC00;
+}
+.signal-c {
+    border: 2px solid #00CC00;
+}
+.signal-i {
+    border: 2px solid #0066FF;
+}
+.signal-p > p,.signal-c > p,.signal-i > p {
+    text-align: center;
+}
+.signal-p > p > img ,.signal-c > p > img ,.signal-i > p > img {
+    border-radius: 5px;
+}
