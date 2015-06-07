@@ -36,8 +36,11 @@
 </div>
 
 <div data-role="page" id="register">
+    <div data-role="header">
+        <h1><a href="#login">Добре дошли в Narusheniq</a></h1>
+    </div>
     <div role="main" class="ui-content">
-        <h1>Добре дошли в Narusheniq</h1>
+        <!--<h1>Добре дошли в Narusheniq</h1>-->
         <form data-ajax="false" onSubmit="return register()" id="info-reg">
             <label for="name-reg">Име</label>
             <input name="name" id="name-reg" value="" type="text" />
@@ -107,9 +110,9 @@
         <h1>Начало</h1>
         <a href="#" class="ui-btn ui-icon-user ui-btn-icon-left ui-nodisc-icon logout" onclick="logout()">Логаут</a>
     </div>
+    <!--<h3>Последни събития:</h3>-->
+    <div role="main" class="ui-content" id="get-home">
 
-    <div role="main" class="ui-content">
-        <p>This is the home page</p>
     </div>
 
 </div>
@@ -215,7 +218,6 @@
 <script type="text/javascript" src="js/login.js"></script>
 <script type="text/javascript" src="js/register.js"></script>
 <script type="text/javascript" src="js/vs-signali.js"></script>
-<script type="text/javascript" src="js/camera.js"></script>
 <script type="text/javascript" src="js/podai-signal.js"></script>
 <script type="text/javascript" src="js/home.js"></script>
 <script type="text/javascript">
