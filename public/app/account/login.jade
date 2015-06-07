@@ -1,23 +1,31 @@
 div.modal-dialog
 	div.modal-content
 	div.modal-header
-		h3 Login
+		h3 Влез в системата
 		button.close( type="button" ng-click="cancel()") &times
 	div.modal-body
 		.mid-login
 			.form-group
 				.row
-					label.col-md-2.control-label.label-login Username
-					.col-md-10
-						input.form-control.login-input(type="text" required="required" placeholder="User Name" ng-model="user.username")
+					label.col-md-12.mrg Потребителско име
+				.row
+					.col-md-12.input-group
+						input.form-control(type="text" required="required" placeholder="Потребителско име" ng-model="user.username")
+						span.input-group-addon
+							span.user-icon
 			.form-group
 				.row
-					label.col-md-2.control-label.label-login Password
-					.col-md-10
-						input.form-control.login-input(type="password" required="required" placeholder="Password" ng-model="user.password")
+					label.col-md-12.mrg Парола
+				.row
+					.col-md-12.input-group
+						input.form-control(type="password" required="required" placeholder="Парола" ng-model="user.password")
+						span.input-group-addon
+							span.password-icon
 				.row(ng-show="invalid")
 					.col-md-12
-						p.invalid-pass username or password invalid
-				button.btn.btn-primary(ng-click="login(user)") Login
+						p.invalid-pass Невалидна парола или потребителско име
+				.row
+					.col-md-12
+						button.btn.btn-primary.btn-login.mrg(ng-click="login(user)") Влез
 	div.modal-footer
-		button.btn.btn-default( type="button" ng-click="cancel()") Close
+		button.btn.btn-default( type="button" ng-click="cancel()") Затвори

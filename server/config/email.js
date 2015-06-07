@@ -1,12 +1,45 @@
-var email   = require("emailjs");
+var nodemailer = require('nodemailer');
+var wellknown = require('nodemailer-wellknown');
 
 module.exports = function(){
-   var server  = email.server.connect({
-      user:    "podaisignal@gmail.com", 
-      password:"podaisignal!", 
-      host:    "smtp.google.com", 
-      ssl: true,
-   });
-   return server;
+   
+
+	// create reusable transporter object using SMTP transport
+	var config = wellknown('Gmail');
+
+	var transporter = nodemailer.createTransport('SMTP',{
+		debug:true,
+	    //service: 'Gmail',
+	    host: 'smtp.gmail.com',
+	    port:587,
+	    auth: {
+	        user: 'podaisignal@gmail.com',
+	        pass: 'podaisignal!'
+	    }
+	});
+
+	// NB! No need to recreate the transporter object. You can use
+	// the same transporter object for all e-mails
+
+	// setup e-mail data with unicode symbols
+	var mailOptions = {
+	    from: 'Podai Signal ✔ podaisignal@gmail.com', // sender address
+	    to: 'alexanderyordanov96@gmail.com', // list of receivers
+	    subject: 'Signal ✔', // Subject line
+	    text: 'Kak e ✔', // plaintext body
+	    html: '<b>Hello world ✔</b>' // html body
+	};
+
+	// send mail with defined transport object
+	transporter.sendMail(mailOptions, function(error, info){
+	    if(error){
+	        console.log(error);
+	    }else{
+	        console.log('Message sent: ' + info.response);
+	    }
+	});
+
+	transporter.close();
+	return transporter;
 }
 

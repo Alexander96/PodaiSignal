@@ -1,7 +1,25 @@
-﻿div(ng-controller="CarouselCtrl" id="slides_control")
-    div
-      carousel( interval="myInterval")
-        slide(ng-repeat="slide in slides" active="slide.active")
-          img(ng-src="{{slide.image}}")
-          div.carousel-caption
-            div.alert.aler-info kak e
+﻿div(ng-controller="CarouselCtrl")
+	div.bg-container
+			.row
+				.col-md-8
+					h3.title1 Нека заедно да оправим България!
+			.row
+				.col-md-8.float-right
+					h3.title2 Бъди активен!
+	.container
+		.row.margin-top
+			.col-md-6
+				.panel.panel-success
+					.panel-heading
+						.panel-title.text-center Новини
+					.panel-body
+						div
+							ol
+								li Община София се присъедини към инициативата
+								li Община Варна се присъедини към инициативата
+			.col-md-6
+				.panel.panel-warning
+					.panel-heading
+						.panel-title.text-center Последни изпратени сигнали
+					.panel-body
+		

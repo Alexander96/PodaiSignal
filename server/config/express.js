@@ -21,7 +21,6 @@ module.exports = function ( app, config) {
             key: 'express.sid'
         }
         ) );
-    app.use('/fonts/', express.static(__dirname+'/public/fonts/'));
     app.use(passport.initialize());                         //intialize the constructor for passport
     app.use(passport.session());                            //and the session for poassport
     app.use( express.static( config.rootPath + '/public' ) );   //sets where to search for views
@@ -33,5 +32,8 @@ module.exports = function ( app, config) {
         res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
         next();
     } );
+    
+    app.use('/css/fonts/', express.static(__dirname+'/public/fonts/'));
+    app.use('/css/fonts', express.static(__dirname+'/public/fonts'));
     //app.use(favicon(config.rootPath + '/public/img/favicon.ico'));
 }
