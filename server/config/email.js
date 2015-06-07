@@ -9,7 +9,9 @@ module.exports = function(){
 
 	var transporter = nodemailer.createTransport('SMTP',{
 		debug:true,
-	    service: 'Gmail',
+	    //service: 'Gmail',
+	    host: 'smtp.gmail.com',
+	    port:587,
 	    auth: {
 	        user: 'podaisignal@gmail.com',
 	        pass: 'podaisignal!'
