@@ -38,6 +38,10 @@ app.config(function($routeProvider, $locationProvider){
             templateUrl: '/partials/signal/signal',
             controller: 'SignalController'
         })
+        .when('/map', {
+            templateUrl: '/partials/map/map',
+            controller: 'MapController'
+        })
         .when('/info', {
             templateUrl: '/partials/info/info',
             controller: 'InfoController'
