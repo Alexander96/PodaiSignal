@@ -1,0 +1,65 @@
+.container
+	.jumbotron
+		.panel.panel-primary
+			.panel-heading
+				h4.panel-title.text-center
+					| Изпрати оплакване
+			.panel-body
+				.row
+					.col-md-6
+						form.form-horizontal(name="signalForm")
+							fieldset.padding-big
+								.form-group
+									.row(ng-show="!identity.isAuthenticated()")
+										label.col-md-12(for="firstName") Име
+											span.must *
+									.row(ng-show="!identity.isAuthenticated()")
+										.col-md-12
+											input.form-control(type="text" required="required" placeholder="Име" ng-model="signal.user.firstName")
+									.row(ng-show="!identity.isAuthenticated()")
+										label.col-md-12(for="middleName") Презиме
+											span.must *
+									.row(ng-show="!identity.isAuthenticated()")
+										.col-md-12
+											input.form-control(type="text" required="required" placeholder="Презиме" ng-model="signal.user.middleName")
+									.row(ng-show="!identity.isAuthenticated()")
+										label.col-md-12(for="lastName") Фамилия
+											span.must *
+									.row(ng-show="!identity.isAuthenticated()")
+										.col-md-12
+											input.form-control(type="text" required="required" placeholder="Фамилия" ng-model="signal.user.lastName")
+									.row(ng-show="!identity.isAuthenticated()")
+										label.col-md-12(for="phone") Телефон
+											span.must *
+									.row(ng-show="!identity.isAuthenticated()")
+										.col-md-12
+											input.form-control(type="text" required="required" placeholder="Телефон" ng-model="signal.phone")
+									.row(ng-show="!identity.isAuthenticated()")
+										label.col-md-12(for="Email") Email
+											span.must *
+									.row(ng-show="!identity.isAuthenticated()")
+										.col-md-12
+											input.form-control(type="text" required="required" placeholder="Email" ng-model="signal.email")
+									.row
+										label.col-md-12(for="photo") Снимково доказателство
+											span.must *
+									.row
+										.col-md-12
+											input.form-control(required="required" ng-change="uploadPhoto()" type="file" ng-model="signal.photo" accept="image/*" app-filereader)
+									.row
+										label.col-md-12(for="Description") Описание
+											span.must *
+									.row
+										.col-md-12
+											textarea.form-control(required="required" placeholder="Описание" ng-model="signal.description")		
+									.pull-right.margin-top
+										button.btn.btn-primary(ng-disabled="signalForm.$invalid" ng-show="indentity.isAuthenticated()" ng-click="sendSignal(signal)" style="margin-right:5px") Изпрати1
+										button.btn.btn-primary(ng-disabled="!(signal.description && signal.photo)" ng-hide="indentity.isAuthenticated()" ng-click="sendSignal(signal)" style="margin-right:5px") Изпрати2
+										a.btn.btn-primary(href="#/") Отмяна
+					.col-md-6
+						h4 Преглеждане на снимка:
+						.row
+							.col-md-12
+								.signal-img-container
+									img(ng-src="{{signal.photo}}")
+			.panel-body(ng-hide="!!identity.currentUser")

@@ -8,6 +8,7 @@ html, body {
 }
 body{
   padding-top: 66px;
+  background: #eaeaea;
 }
 .navbar-right .navbar-form input {
   margin-right: 10px;
@@ -61,25 +62,76 @@ input.ng-dirty.ng-valid {
   max-width: 250px;
 }
 
-#wrap-cont{
-  overflow: hidden;
-  max-height: 490px;
-  z-index: 1;
+.logo-container{
+  max-width: 70px;
 }
-#container-bg{
-  min-height: 500px;
-  width:105%;
-  margin-top: -5px;
-  height:100%;
-  background:url('/img/bg.jpg') no-repeat center center;
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
-  z-index: 1;
-  background-size: cover;
+.logo-container img{
+  width: 50px;
+  margin-top: 5px;
+}
+
+#slides_control > div{
+  height: 100%;
 
 }
-div#content-home{
+#slides_control img{
+  margin:auto;
+  width: 100%;
+
+  max-height: 500px;
+  max-width: 2000px;
+  -webkit-filter: blur(2px); 
+  -moz-filter: blur(2px); 
+  -o-filter: blur(2px); 
+  -ms-filter: blur(2px); 
+  filter: blur(2px);
+}
+#slides_control {
+  margin: 0 auto;
+  width: 100%;
+  max-height: 500px;
+  max-width: 2000px;
+}
+a.white-text{
+  color: white !important;
+}
+a.white-text:hover{
+  color: blue !important;
+}
+.text-center{
+  text-align: center;
+}
+.line{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  height: 2px;
+  border-bottom: 1px solid #eaeaea;
+}
+.padding-big{
+  padding: 10px;
+}
+.margin-top{
+  margin-top: 10px;
+}
+.margin-bottom{
+  margin-bottom: 10px;
+}
+.margin-right{
+  margin-right: 5px;
+}
+label{
+  margin-left: 2px;
+}
+.must{
+  color: red;
+}
+.search-icon{
+  background: url("/img/search.png") center center no-repeat;
+  background-size: cover;
+  display: block;
+  width: 25px;
+  height: 20px;
+}
+.signal-img-container img{
+  width: 100%;
 }
