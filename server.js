@@ -11,8 +11,8 @@ require('./server/config/routes.js')(app);
 
 var message = {
    text:    "i hope this works", 
-   from:    "podaisignal@abv.bg", 
-   to:      "alexanderyordanov96@gmail.com",
+   from:    "Podai podaisignal@abv.bg", 
+   to:      "Alexander alexanderyordanov96@gmail.com",
    subject: "Оплакване",
    attachment: 
    [
