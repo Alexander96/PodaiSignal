@@ -2,12 +2,23 @@
  * Created by Freezyy on 6/6/2015.
  */
 
-
+function autoFill() {
+    if(isLogged) {
+        $('#name').val(loggedUser.firstName);
+        $('#lastname').val(loggedUser.lastName);
+        $('#phone').val(loggedUser.phone);
+        $('#email').val(loggedUser.email);
+    }
+    else {
+        $(".ui-btn-icon-left").css({display: "none"})
+    }
+}
 function submitSignal() {
     firstName = $("#name").val();
     lastName = $("#lastname").val();
     description = $("#description").val();
     phone = $("#phone").val();
+    email = $("#emial").val();
     picture = img;
 
     var today = new Date();

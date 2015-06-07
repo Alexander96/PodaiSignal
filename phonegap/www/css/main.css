@@ -1,3 +1,6 @@
+* {
+    font-family: "Helvetica Neue Light", "Lucida Grande", "Calibri", "Arial", sans-serif !important;
+}
 .login-page-info {
     width: 100%;
     text-align: center;
@@ -35,4 +38,8 @@
 }
 .signal-p > p > img ,.signal-c > p > img ,.signal-i > p > img {
     border-radius: 5px;
+}
+textarea#description {
+    resize: none !important;
+    height: 100px !important;
 }

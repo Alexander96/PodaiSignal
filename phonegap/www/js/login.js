@@ -13,6 +13,13 @@ function login(){
         data: {username: username, password: pass },
         success: function(user){
             if(user.success) {
+                loggedUser = {
+                    firstName: user.user.firstName,
+                    lastName: user.user.lastName,
+                    phone: user.user.phone,
+                    email: user.user.email
+                };
+                isLogged = true;
                 $.mobile.changePage( "#home", { transition: "slide" });
             }
             else {
@@ -23,10 +30,6 @@ function login(){
             }
         },
         error: function(){
-            //$('#a').popup();
-            //setTimeout(function(){
-            //    $('#a').popup('open');
-            //},100);
         }
 
     });
