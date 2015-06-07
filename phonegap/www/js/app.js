@@ -3,7 +3,6 @@
  */
 var domain = "http://podaisignal.herokuapp.com";
 
-var isLogged = false;
 
 var loggedUser = {
     firstName: '',
@@ -15,6 +14,7 @@ var loggedUser = {
 var allSignals;
 
 var doneSignals;
+
 
 $(function () {
     $("[data-role=panel]").panel().enhanceWithin();

@@ -3,17 +3,24 @@
  */
 
 function autoFill() {
-    if(isLogged) {
+    if(loggedUser == null || loggedUser.firstName == '') {
+        $("#hide-menu").css({display: "none"});
+        $("#hide-logout").css({display: "none"});
+    }
+    else {
         $('#name').val(loggedUser.firstName);
         $('#lastname').val(loggedUser.lastName);
         $('#phone').val(loggedUser.phone);
         $('#email').val(loggedUser.email);
-    }
-    else {
-        $(".ui-btn-icon-left").css({display: "none"})
+        $("#hide-menu").css({display: "inline-block"});
+        $("#hide-logout").css({display: "inline-block"});
     }
 }
-function submitSignal() {
+function submitSignal(mode) {
+    if(mode == 'guest') {
+        $('#hide-menu').css({display: none});
+        logout();
+    }
     firstName = $("#name").val();
     lastName = $("#lastname").val();
     description = $("#description").val();
@@ -37,18 +44,18 @@ function submitSignal() {
     var data = picture.slice(picture.indexOf(",") +1, picture.length);
     var contentType = picture.slice(picture.indexOf(":") + 1, picture.indexOf(";base64"));
     console.log(img);
-    //
-    //$.ajax({
-    //    type: "POST",
-    //    url: domain + "/signal",
-    //    data: {user: {firstName: firstName, lastName: lastName, phone: phone}, description: description, photo: {data: data, ContentType: contentType}},
-    //    success: function() {
-    //        alert("Boom!");
-    //    },
-    //    error: function() {
-    //        alert("false");
-    //    }
-    //});
+
+    $.ajax({
+        type: "POST",
+        url: domain + "/signal",
+        data: {user: {firstName: firstName, lastName: lastName, phone: phone}, description: description, photo: {data: data, ContentType: contentType}},
+        success: function() {
+            alert("Boom!");
+        },
+        error: function() {
+            alert("false");
+        }
+    });
     return false;
 }
 
