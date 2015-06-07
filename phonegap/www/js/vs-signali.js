@@ -40,7 +40,11 @@ function loadSignals(id, d) {
 
 
 function getSignals(){
-    $.mobile.loading("show");
+
+    $.mobile.loading( "show", {
+        theme: "",
+        html: "<span class='ui-icon'><img src='img/loading.gif' /></span>"
+    });
     $.ajax({
         url: domain + '/allsignals',
         type: 'GET',
@@ -51,7 +55,7 @@ function getSignals(){
                 console.log("-----Signals-----");
                 console.log(allSignals);
                 loadSignals(null, allSignals);
-                $.mobile.loading("hide");
+                $.mobile.loading('hide');
             }
         }
     });

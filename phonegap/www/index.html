@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta name="format-detection" content="telephone=no" />
     <meta name="msapplication-tap-highlight" content="no" />
-    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
     <title>Нарушения</title>
@@ -102,8 +103,9 @@
 
 <div data-role="page" id="home">
     <div data-role="header">
-        <a href="#mainmenu" class="ui-btn ui-icon-bullets ui-btn-icon-left">Меню</a>
+        <a href="#mainmenu" class="ui-btn ui-icon-bullets ui-btn-icon-left ui-nodisc-icon">Меню</a>
         <h1>Начало</h1>
+        <a href="#" class="ui-btn ui-icon-user ui-btn-icon-left ui-nodisc-icon logout" onclick="logout()">Логаут</a>
     </div>
 
     <div role="main" class="ui-content">
@@ -114,8 +116,9 @@
 
 <div data-role="page" id="podai-signal">
     <div data-role="header">
-        <a href="#mainmenu" class="ui-btn ui-icon-bullets ui-btn-icon-left">Меню</a>
+        <a href="#mainmenu" class="ui-btn ui-icon-bullets ui-btn-icon-left ui-nodisc-icon" id="hide-menu">Меню</a>
         <h1>Подаване на сигнал</h1>
+        <a href="#" class="ui-btn ui-icon-user ui-btn-icon-left ui-nodisc-icon logout" onclick="logout()" id="hide-logout">Логаут</a>
     </div>
     <div role="main" class="ui-content">
         <form data-ajax="false" onsubmit="return submitSignal()" id="signal-submit">
@@ -129,18 +132,19 @@
             <input name="phone" id="phone" value="" type="text" />
             <label for="description">Описание на проблема</label>
             <textarea name="description" id="description"></textarea>
-            <label for="photo"></label>
+            <!--<label for="photo"></label>-->
             <input type="submit" value="Изпрати"/>
         </form>
-        <button id="photo" onclick="capturePhoto()">Направи снимка</button>
+        <!--<button id="photo" onclick="capturePhoto()">Направи снимка</button>-->
     </div>
 
 </div>
 
 <div data-role="page" id="vs-signali">
     <div data-role="header">
-        <a href="#mainmenu" class="ui-btn ui-icon-bullets ui-btn-icon-left">Меню</a>
+        <a href="#mainmenu" class="ui-btn ui-icon-bullets ui-btn-icon-left ui-nodisc-icon">Меню</a>
         <h1>Всички сигнали</h1>
+        <a href="#" class="ui-btn ui-icon-user ui-btn-icon-left ui-nodisc-icon logout" onclick="logout()">Логаут</a>
     </div>
     <div role="main" class="ui-content" id="selecter">
         <select id="signal-select" name="signal-select">
@@ -158,8 +162,9 @@
 
 <div data-role="page" id="help">
     <div data-role="header">
-        <a href="#mainmenu" class="ui-btn ui-icon-bullets ui-btn-icon-left">Меню</a>
+        <a href="#mainmenu" class="ui-btn ui-icon-bullets ui-btn-icon-left ui-nodisc-icon">Меню</a>
         <h1>Помощ</h1>
+        <a href="#" class="ui-btn ui-icon-user ui-btn-icon-left ui-nodisc-icon logout" onclick="logout()">Логаут</a>
     </div>
 
     <div role="main" class="ui-content">
@@ -201,6 +206,8 @@
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 <script src="js/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="cordova.js"></script>
