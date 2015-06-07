@@ -3,10 +3,10 @@ app.controller("AllSingalsController", function($scope, SignalService, MapServic
 		console.log(data);
 		$scope.signals = data;
 	});
-	$scope.viewMap = function(i){
+	$scope.viewMap = function(s){
 		var coords = {
-			lat: $scope.signals[i].place.lat,
-			lng: $scope.signals[i].place.lng
+			lat: s.place.lat,
+			lng: s.place.lng
 		}
 		MapService.coords = coords;
 
