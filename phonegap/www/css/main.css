@@ -18,7 +18,7 @@
     background-color: #FFBABA;
     /*background-image: url('error.png');*/
 }
-.signal-p,.signal-c,.signal-i {
+.signal-p,.signal-c,.signal-i, .last-signals {
     padding: 5px;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -33,9 +33,13 @@
 .signal-i {
     border: 2px solid #0066FF;
 }
-.signal-p > p,.signal-c > p,.signal-i > p {
+.last-signals {
+    border: 2px solid gray;
+}
+.signal-p > p,.signal-c > p,.signal-i > p, .last-signals > p{
     text-align: center;
 }
+
 .signal-p > p > img ,.signal-c > p > img ,.signal-i > p > img {
     border-radius: 5px;
 }
