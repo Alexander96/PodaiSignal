@@ -14,7 +14,7 @@
 						.panel-title.text-center Новини
 					.panel-body
 						div
-							ol
+							ul.margin-left
 								li Община София се присъедини към инициативата
 								li Община Варна се присъедини към инициативата
 			.col-md-6
@@ -22,4 +22,10 @@
 					.panel-heading
 						.panel-title.text-center Последни изпратени сигнали
 					.panel-body
+						ul
+							li(ng-repeat="s in lastSignals")
+								h5.row {{s.description}}
+								div.row
+									span {{s.firstName}} {{s.lastName}}
+								hr
 		

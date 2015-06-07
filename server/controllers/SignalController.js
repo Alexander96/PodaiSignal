@@ -1,4 +1,5 @@
 var Signal = require('mongoose').model('Signal');
+var fs = require('fs');
 function applyUrl(signals){
 	for(var i=0;i<signals.length;i++){
 		signals[i].url = "/signal-img/" + signals[i]._id;
@@ -58,6 +59,8 @@ module.exports = {
 	},
     postSignal: function(req, res, next){    //creates a signal
         var signal = req.body;
+        var imgPath = "public/img/default.jpg";
+            
         console.log("#########################");
         console.log(signal);
         if(signal.photo) {
@@ -67,6 +70,13 @@ module.exports = {
             var photo = {};
             photo.data = buf;
             photo.contentType = signal.photo.contentType;
+            signal.photo = photo;
+        }else{
+            pic = fs.readFileSync(imgPath);
+            var photo = {
+                data: pic,
+                contentType: 'image/jpg'
+            }
             signal.photo = photo;
         }
         signal.status = "pending";
@@ -89,4 +99,15 @@ module.exports = {
             console.log(s);
         });
     },
+    getLastThreeSignals: function(req, res){
+        Signal.find({}).limit(3).select("-photo").exec(function(err, data){
+            if(err){
+                console.log("Smth went wrong :(");
+                res.status(500);
+                res.end();
+            }
+            res.status(200);
+            res.send(data);
+        })   
+    }
 }

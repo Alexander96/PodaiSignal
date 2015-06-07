@@ -34,10 +34,24 @@ app.factory("SignalService", function($http, $q, identity){
 		return defer.promise;
 
 	}
+	function lastSignals(){
+		var defer = $q.defer();
+
+		$http.get("/last-signals")
+		.success(function(data){
+			defer.resolve(data);
+		})
+		.error(function(data){
+			console.log(data);
+			defer.reject();
+		});
+		return promise;
+	}
 	return {
 		getAllSignals: getAllSignals,
 		getAllSignalsStatus: getAllSignalsStatus,
 		getSignalById: getSignalById,
-		postSignal: postSignal
+		postSignal: postSignal,
+		lastSignals: lastSignals
 	}
 })

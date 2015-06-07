@@ -30,6 +30,7 @@ module.exports = function (app) {
     app.get('/signalsByStatus/:status', controllers.signal.getAllSignalStatus);
     app.get('/signal/:id', controllers.signal.getSignalById);
     app.get('/signal-img/:signalId', controllers.signal.getSignalPhoto);
+    app.get('/last-signals', controllers.signal.getLastThreeSignals)
 
     app.get('*', function (req, res) {
         res.render('index', {currentUser: req.user});

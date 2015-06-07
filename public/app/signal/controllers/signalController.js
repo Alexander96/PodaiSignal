@@ -1,4 +1,4 @@
-app.controller("SignalController", function($scope, SignalService, identity){
+app.controller("SignalController", function($scope, SignalService, identity, notifier){
 	var data,
 		contentType,
 		photo = {};
@@ -43,6 +43,7 @@ app.controller("SignalController", function($scope, SignalService, identity){
 		console.log(signal);
 		SignalService.postSignal(signal).then(function(response){
 			console.log("resonse: " + response);
+			notifier.success('Успешно изпратено!');
 		})
 	}
 });

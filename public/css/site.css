@@ -97,6 +97,10 @@ a.white-text:hover{
 .margin-right{
   margin-right: 5px;
 }
+.margin-left{
+  margin-left: 30px;
+  list-style-type: none;
+}
 label{
   margin-left: 2px;
 }
