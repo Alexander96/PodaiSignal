@@ -16,8 +16,8 @@
 						option(value="date") Дата
 						option(value="-rate") Популярност
 		.row
-			div.col-md-6(ng-repeat="signal in signals | orderBy: sort |filter: searchSignal")
-				.signal-container(class="signal-{{signal.status}}")
+			div.col-md-6(ng-repeat="signal in signals track by $index  | orderBy: sort |filter: searchSignal")
+				.signal-container(ng-click="viewMap($index)" class="signal-{{signal.status}}")
 					.row
 						.col-md-6
 							.img-signal-container

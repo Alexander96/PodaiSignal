@@ -165,3 +165,8 @@ label{
 .small-text{
   font-size: 18px !important;
 }
+#map-canvas{
+  height: 500px;
+  border: 1px solid #3fad46;
+  border-radius: 5px;
+}

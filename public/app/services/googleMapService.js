@@ -1,4 +1,5 @@
 app.factory('MapService', function(identity){
+	var coords = {};
 	function initMap(el, options){		//initialize the map
 		var map = new google.maps.Map(el, options);
 		google.maps.Map.prototype.markers = new Array();
@@ -10,8 +11,7 @@ app.factory('MapService', function(identity){
 	function addPlace(map, location){	//add a place on the map
 		var marker = new google.maps.Marker({
           position: location,
-          icon: '/img/marker-blue.png',
-          draggable: true,
+          draggable: false,
           map: map,
           zIndex: 5
       	});
@@ -160,6 +160,7 @@ app.factory('MapService', function(identity){
 		displayRoute: displayRoute,
 		deleteRoute: deleteRoute,
 		setInfoRoute: setInfoRoute,
-		displayArrayRoutes: displayArrayRoutes
+		displayArrayRoutes: displayArrayRoutes,
+		coords: coords
 	}
 })
